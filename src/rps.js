@@ -5,6 +5,7 @@ function Rock() {
 
 function Paper(){
 	this.type = 'paper'
+	this.beats = 'rock'
 };
 
 function Scissors(){
@@ -15,13 +16,7 @@ function Scissors(){
 function Game(){};
 
 Game.prototype.winner = function(pick1, pick2) {
-	if(pick1.beats === pick2.type) return 'rock wins';
-	if(pick2.beats === pick1.type) return 'scissors wins';
-	// if(gesture === paper) return 'paper wins';
+	if(pick1.beats === pick2.type) return 'Pick 1 wins!';
+	if(pick2.beats === pick1.type) return 'Pick 2 wins!';
+	if(pick1.type === pick2.type) return 'You draw!';
 };
-
-// Game.prototype.loser = function(pick1, pick2) {
-// 	if(gesture === scissors) return 'scissors loses';
-// 	if(gesture === paper) return 'paper loses';
-// 	if(gesture === rock) return 'rock loses';
-// };
