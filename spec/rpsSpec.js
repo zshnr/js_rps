@@ -13,8 +13,18 @@ describe('Rock Paper Scissors', function(){
 		});
 
 		it('scissors is scissors', function(){
+			scissors = new Scissors;
 			expect(scissors.type).toEqual('scissors');
 		});
 		
 	});
+
+	describe('which gesture beats what', function() {
+
+		it('rock beats scissors', function() {
+			expect(game.winner).toEq('rock wins')
+		});
+
+	});
+
 });

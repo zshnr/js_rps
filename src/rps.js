@@ -5,3 +5,7 @@ function Rock() {
 function Paper(){
 	this.type = 'paper'
 };
+
+function Scissors(){
+	this.type = 'scissors'
+};
