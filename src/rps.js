@@ -9,3 +9,12 @@ function Paper(){
 function Scissors(){
 	this.type = 'scissors'
 };
+
+function Game(){
+
+};
+
+Game.prototype.winner = function() {
+	return 'rock wins';
+};
+
