@@ -15,5 +15,6 @@ function Game(){};
 Game.prototype.winner = function(gesture) {
 	if(gesture === rock) return 'rock wins';
 	if(gesture === scissors) return 'scissors wins';
+	if(gesture === paper) return 'paper wins';
 };
 

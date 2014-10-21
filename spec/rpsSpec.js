@@ -37,4 +37,11 @@ describe('Rock Paper Scissors', function(){
 
 	});
 
+	describe('losers are', function(){
+
+		it('scissors loses to rock', function(){
+			expect(game.loser(rock)).toEqual('scissor loses');
+		});
+	});
+
 });
