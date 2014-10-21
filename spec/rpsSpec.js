@@ -23,21 +23,25 @@ describe('Rock Paper Scissors', function(){
 		
 	});
 
-	describe('winners are', function() {
+	describe('Outcomes', function() {
 
-		it('rock beats scissors', function() {
+		it('Pick 1 beats Pick 2', function() {
 			pick1 = new Rock;
 			pick2 = new Scissors;
 			expect(game.winner(pick1, pick2)).toEqual('rock wins');
 		});
 
-		it('paper beats scissors', function() {
-			expect(game.winner(pick1, pick2)).toEqual('scissors wins');
+		it('Pick 2 beats Pick 1', function() {
+			pick2 = new Paper;
+			pick1 = new Scissors;
+			expect(game.winner(pick2, pick1)).toEqual('scissors wins');
 		});
 
-		// it('scissors beats paper', function(){
-		// 	expect(game.winner(scissors)).toEqual('scissors wins');
-		// });
+		it('Draw', function(){
+			pick1 = new Paper;
+			pick2 = new Paper;
+			expect(game.winner(pick1, pick2)).toEqual('You draw!');
+		});
 
 		// it('paper beats rock', function() {
 		// 	expect(game.winner(paper)).toEqual('paper wins');

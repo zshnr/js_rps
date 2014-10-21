@@ -9,13 +9,14 @@ function Paper(){
 
 function Scissors(){
 	this.type = 'scissors'
+	this.beats = 'paper'
 };
 
 function Game(){};
 
 Game.prototype.winner = function(pick1, pick2) {
 	if(pick1.beats === pick2.type) return 'rock wins';
-	// if(pick1.beats === pick2.type) return 'scissors wins';
+	if(pick2.beats === pick1.type) return 'scissors wins';
 	// if(gesture === paper) return 'paper wins';
 };
 
