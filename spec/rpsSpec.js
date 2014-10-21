@@ -8,7 +8,12 @@ describe('Rock Paper Scissors', function(){
 		});
 
 		it('paper is paper', function() {
+			paper = new Paper;
 			expect(paper.type).toEqual('paper');
+		});
+
+		it('scissors is scissors', function(){
+			expect(scissors.type).toEqual('scissors');
 		});
 		
 	});
