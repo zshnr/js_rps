@@ -10,11 +10,10 @@ function Scissors(){
 	this.type = 'scissors'
 };
 
-function Game(){
+function Game(){};
 
-};
-
-Game.prototype.winner = function() {
-	return 'rock wins';
+Game.prototype.winner = function(gesture) {
+	if(gesture === rock) return 'rock wins';
+	if(gesture === scissors) return 'scissors wins';
 };
 

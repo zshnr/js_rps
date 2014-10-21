@@ -19,16 +19,20 @@ describe('Rock Paper Scissors', function(){
 		
 	});
 
-	describe('which gesture beats what', function() {
+	describe('winners are', function() {
 
 		it('rock beats scissors', function() {
 			game = new Game;
-			expect(game.winner()).toEqual('rock wins');
+			expect(game.winner(rock)).toEqual('rock wins');
 		});
 
 		it('scissors beats paper', function(){
 			game = new Game;
-			expect(game.winner()).toEqual('scissors wins');
+			expect(game.winner(scissors)).toEqual('scissors wins');
+		});
+
+		it('paper beats rock', function() {
+			expect(game.winner(paper)).toEqual('paper wins');
 		});
 
 	});
