@@ -27,7 +27,7 @@ describe('Rock Paper Scissors', function(){
 		});
 
 		it('scissors beats paper', function(){
-			game = new Game;
+			// game = new Game;
 			expect(game.winner(scissors)).toEqual('scissors wins');
 		});
 
@@ -45,6 +45,10 @@ describe('Rock Paper Scissors', function(){
 
 		it('paper loses to scissors', function() {
 			expect(game.loser(paper)).toEqual('paper loses');
+		});
+
+		it('rock loses to paper', function(){
+			expect(game.loser(rock)).toEqual('rock loses');
 		});
 	});
 
