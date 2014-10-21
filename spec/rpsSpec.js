@@ -33,6 +33,10 @@ describe('Rock Paper Scissors', function(){
 			expect(paper.beats).toEqual('rock')
 		});
 
+		it('Scissors beats paper', function(){
+			expect(scissors.beats).toEqual('paper')
+		});
+
 	});
 
 	describe('Outcomes', function() {
