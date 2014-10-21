@@ -40,7 +40,11 @@ describe('Rock Paper Scissors', function(){
 	describe('losers are', function(){
 
 		it('scissors loses to rock', function(){
-			expect(game.loser(rock)).toEqual('scissor loses');
+			expect(game.loser(scissors)).toEqual('scissors loses');
+		});
+
+		it('paper loses to scissors', function() {
+			expect(game.loser(paper)).toEqual('paper loses');
 		});
 	});
 
